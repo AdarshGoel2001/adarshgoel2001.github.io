@@ -199,6 +199,18 @@ h2 {
   font-weight: 500;
 }
 
+.entry-body a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.entry-body a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
 /* ─── Awards / flat list ─────────────────────────── */
 .flat-list {
   list-style: none;
@@ -251,7 +263,8 @@ h2 {
   }
   .entry-body li::before { top: 7pt; }
   .flat-list li { font-size: 9.5pt; margin-bottom: 3pt; }
-  a { color: black !important; border-bottom: none !important; }
+  a { color: black !important; border-bottom: none !important; text-decoration: none !important; }
+  .entry-body a { border-bottom: none !important; }
   .entry-body code { background: transparent; padding: 0; }
 }
 
@@ -327,10 +340,10 @@ h2 {
     </div>
     <div class="entry-org">Self-directed research and open-source · Bengaluru</div>
     <ul class="entry-body">
-      <li><strong>AutomationBench (Zapier RL-verifier agent benchmark) — open-source contributions.</strong> Shipped a four-layer retrieval pipeline (BM25 + <code>nomic-embed-text-v1.5</code> semantic recall + metadata rerank + query-handshake protocol) replacing the paper's BM25 baseline; lifted strict pass-rate <strong>~3×</strong> and partial credit <strong>2.7×</strong> on a frozen 12-task slice. Two upstream PRs (visualizer subdir fix merged; <code>api_fetch</code> parser-tolerance in review).</li>
+      <li><strong><a href="https://github.com/AdarshGoel2001/AutomationBench" target="_blank" rel="noopener">AutomationBench</a> (Zapier RL-verifier agent benchmark) — open-source contributions.</strong> Shipped a four-layer retrieval pipeline (BM25 + <code>nomic-embed-text-v1.5</code> semantic recall + metadata rerank + query-handshake protocol) replacing the paper's BM25 baseline; lifted strict pass-rate <strong>~3×</strong> and partial credit <strong>2.7×</strong> on a frozen 12-task slice. Two upstream PRs (visualizer subdir fix merged; <code>api_fetch</code> parser-tolerance in review).</li>
       <li><strong>Multi-CLI evaluation harness for AutomationBench.</strong> Built an MCP-server-based harness running five subscription-authenticated agent CLIs (Claude Code, Codex, Gemini Code Assist, Opencode, Openclaw) on $0-per-call infrastructure. Extended the paper's failure-mode taxonomy with harness-attributable buckets; hand-labeled 72 trajectories across six model/CLI cells. Cross-model synthesis surfaced the post-retrieval bottleneck shift from search-miss to reasoning errors.</li>
-      <li><strong>Orbit Wars (Kaggle competition).</strong> Designed a deterministic in-process simulator (<code>radar.py</code>) mirroring the env step-by-step at 99% fidelity; constrained the policy's action space to <em>edge-pair selection only</em>, eliminating learned trajectory and physics errors. Built a dynamic-token + threshold-gated axial-attention transformer with NumPy-baked inference for <strong>~100× speedup</strong> (3.16 s → 20 ms) under the 1-second-per-turn CPU budget. Ran PPO self-play on rented 8-vCPU instances; peak win-rate 0.63 vs heuristic baseline.</li>
-      <li><strong>Modular world-models framework</strong> (PyTorch) supporting interchangeable vision, dynamics, and controller modules. In-progress reproductions of <strong>DreamerV3</strong>, <strong>IRIS-Δ</strong>, <strong>DIAMOND</strong>, and a PROWL-style continual-learning prioritised replay buffer; Ha &amp; Schmidhuber's 2018 <em>World Models</em> was the initial target.</li>
+      <li><strong><a href="https://github.com/AdarshGoel2001/orbitWars" target="_blank" rel="noopener">Orbit Wars</a> (Kaggle competition).</strong> Designed a deterministic in-process simulator (<code>radar.py</code>) mirroring the env step-by-step at 99% fidelity; constrained the policy's action space to <em>edge-pair selection only</em>, eliminating learned trajectory and physics errors. Built a dynamic-token + threshold-gated axial-attention transformer with NumPy-baked inference for <strong>~100× speedup</strong> (3.16 s → 20 ms) under the 1-second-per-turn CPU budget. Ran PPO self-play on rented 8-vCPU instances; peak win-rate 0.63 vs heuristic baseline.</li>
+      <li><strong><a href="https://github.com/AdarshGoel2001/rl-lab" target="_blank" rel="noopener">Modular world-models framework</a></strong> (PyTorch) supporting interchangeable vision, dynamics, and controller modules. In-progress reproductions of <strong>DreamerV3</strong>, <strong>IRIS-Δ</strong>, <strong>DIAMOND</strong>, and a PROWL-style continual-learning prioritised replay buffer; Ha &amp; Schmidhuber's 2018 <em>World Models</em> was the initial target.</li>
       <li><strong>Self-taught ML curriculum</strong> from statistics and linear algebra through the world-models research frontier (Karpathy, diffusion policies, PPO, DIAMOND, V-JEPA 2, UWM, Cosmos). Built a learning scaffold from lecture slides and transcripts that let me work through <strong>Stanford CS 234</strong> (RL), <strong>CS 236</strong> (Deep Generative Models), and <strong>MIT 6.S184</strong> from first principles alongside the original lecturers.</li>
     </ul>
   </div>
