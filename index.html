@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adarsh Goel — Resume</title>
+<meta name="description" content="ML & robotics engineer · ex-Ola Electric Founder's Office · BITS Pilani">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fafaf7;
+  --text: #18181b;
+  --text-soft: #3f3f46;
+  --text-muted: #71717a;
+  --rule: #e4e4e7;
+  --rule-soft: #f0f0ec;
+  --accent: #1e40af;
+  --code-bg: rgba(24, 24, 27, 0.05);
+  --mono: "JetBrains Mono", "SF Mono", Menlo, monospace;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01", "cv11";
+}
+
+body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 88px 56px 120px;
+}
+
+/* ─── Header ─────────────────────────────────────── */
+header {
+  margin-bottom: 64px;
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  letter-spacing: -0.025em;
+  color: var(--text);
+}
+
+.tagline {
+  font-size: 15px;
+  color: var(--text-soft);
+  margin: 0 0 22px 0;
+  font-weight: 400;
+}
+
+.contact {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.contact a {
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.contact a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.contact .sep {
+  color: var(--rule);
+  margin: 0 8px;
+  user-select: none;
+}
+
+/* ─── Sections ───────────────────────────────────── */
+section {
+  margin-bottom: 44px;
+}
+
+section:last-of-type {
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin: 0 0 28px 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ─── Entries ────────────────────────────────────── */
+.entry {
+  margin-bottom: 32px;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 2px;
+}
+
+.entry-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.005em;
+}
+
+.entry-org {
+  font-size: 14.5px;
+  color: var(--text-soft);
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+
+.entry-date {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: -0.01em;
+}
+
+.entry-body {
+  margin: 0;
+  padding-left: 18px;
+  list-style: none;
+}
+
+.entry-body li {
+  position: relative;
+  padding-left: 4px;
+  margin-bottom: 12px;
+  color: var(--text-soft);
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+.entry-body li::before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 11px;
+  width: 4px;
+  height: 4px;
+  background: var(--text-muted);
+  border-radius: 50%;
+}
+
+.entry-body li:last-child {
+  margin-bottom: 0;
+}
+
+.entry-body strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.entry-body em {
+  font-style: italic;
+  color: var(--text);
+}
+
+.entry-body code {
+  font-family: var(--mono);
+  font-size: 13px;
+  background: var(--code-bg);
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ─── Awards / flat list ─────────────────────────── */
+.flat-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.flat-list li {
+  margin-bottom: 10px;
+  color: var(--text-soft);
+  font-size: 14.5px;
+}
+
+.flat-list li:last-child {
+  margin-bottom: 0;
+}
+
+.flat-list strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ─── Print ──────────────────────────────────────── */
+@media print {
+  body {
+    max-width: none;
+    padding: 22pt 32pt;
+    font-size: 9.5pt;
+    background: white;
+    color: black;
+  }
+  h1 { font-size: 20pt; }
+  .tagline { font-size: 10pt; margin-bottom: 8pt; }
+  .contact { font-size: 8.5pt; }
+  h2 {
+    font-size: 8.5pt;
+    margin-bottom: 12pt;
+    padding-bottom: 4pt;
+  }
+  header { margin-bottom: 16pt; }
+  section { margin-bottom: 14pt; page-break-inside: avoid; }
+  .entry { margin-bottom: 12pt; page-break-inside: avoid; }
+  .entry-title { font-size: 10.5pt; }
+  .entry-org { font-size: 9.5pt; margin-bottom: 4pt; }
+  .entry-date { font-size: 8.5pt; }
+  .entry-body li {
+    font-size: 9.5pt;
+    margin-bottom: 3pt;
+    line-height: 1.4;
+  }
+  .entry-body li::before { top: 7pt; }
+  .flat-list li { font-size: 9.5pt; margin-bottom: 3pt; }
+  a { color: black !important; border-bottom: none !important; }
+  .entry-body code { background: transparent; padding: 0; }
+}
+
+/* ─── Mobile ─────────────────────────────────────── */
+@media (max-width: 640px) {
+  body {
+    padding: 48px 24px 80px;
+    font-size: 14px;
+  }
+  h1 { font-size: 28px; }
+  header { margin-bottom: 40px; }
+  .contact { font-size: 12px; line-height: 1.9; }
+  .contact .sep { margin: 0 6px; }
+  .entry-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .entry-date { font-size: 11.5px; }
+  .entry-body li { font-size: 14px; }
+  section { margin-bottom: 40px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Adarsh Goel</h1>
+  <p class="tagline">ML &amp; robotics engineer · ex-Ola Electric Founder's Office · BITS Pilani '24</p>
+  <div class="contact">
+    Bengaluru, India
+    <span class="sep">·</span>
+    <a href="mailto:adarshgoel@gmail.com">adarshgoel@gmail.com</a>
+    <span class="sep">·</span>
+    +91 89799 51532
+    <span class="sep">·</span>
+    <a href="https://www.linkedin.com/in/adarsh-goel-64b0b01bb/" rel="noopener" target="_blank">LinkedIn</a>
+    <span class="sep">·</span>
+    <a href="#" rel="noopener">GitHub</a>
+  </div>
+</header>
+
+<section>
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Birla Institute of Technology and Science, Pilani</div>
+      <div class="entry-date">2020 – 2024</div>
+    </div>
+    <div class="entry-org">B.E. Manufacturing Engineering · GPA 7.8 / 10 · Completed in 7 of 8 semesters</div>
+    <ul class="entry-body">
+      <li>Self-taught the full JEE syllabus in <strong>9 months</strong> from free YouTube lectures to secure admission (typical prep time: 2–3 years).</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Awards</h2>
+  <ul class="flat-list">
+    <li>Winner, Polygon Track — <strong>ETHIndia 2023</strong> (India's largest crypto hackathon)</li>
+    <li>Winner — <strong>BharatX API Hackathon</strong> (prize: 5× M2 MacBook Pros)</li>
+    <li>Letter of Recommendation, Director of BITS Pilani Campus (Oasis 2023)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Independent ML Research &amp; Open-Source</div>
+      <div class="entry-date">Apr 2025 – Present</div>
+    </div>
+    <div class="entry-org">Self-directed research and open-source · Bengaluru</div>
+    <ul class="entry-body">
+      <li><strong>AutomationBench (Zapier RL-verifier agent benchmark) — open-source contributions.</strong> Shipped a four-layer retrieval pipeline (BM25 + <code>nomic-embed-text-v1.5</code> semantic recall + metadata rerank + query-handshake protocol) replacing the paper's BM25 baseline; lifted strict pass-rate <strong>~3×</strong> and partial credit <strong>2.7×</strong> on a frozen 12-task slice. Two upstream PRs (visualizer subdir fix merged; <code>api_fetch</code> parser-tolerance in review).</li>
+      <li><strong>Multi-CLI evaluation harness for AutomationBench.</strong> Built an MCP-server-based harness running five subscription-authenticated agent CLIs (Claude Code, Codex, Gemini Code Assist, Opencode, Openclaw) on $0-per-call infrastructure. Extended the paper's failure-mode taxonomy with harness-attributable buckets; hand-labeled 72 trajectories across six model/CLI cells. Cross-model synthesis surfaced the post-retrieval bottleneck shift from search-miss to reasoning errors.</li>
+      <li><strong>Orbit Wars (Kaggle competition).</strong> Designed a deterministic in-process simulator (<code>radar.py</code>) mirroring the env step-by-step at 99% fidelity; constrained the policy's action space to <em>edge-pair selection only</em>, eliminating learned trajectory and physics errors. Built a dynamic-token + threshold-gated axial-attention transformer with NumPy-baked inference for <strong>~100× speedup</strong> (3.16 s → 20 ms) under the 1-second-per-turn CPU budget. Ran PPO self-play on rented 8-vCPU instances; peak win-rate 0.63 vs heuristic baseline.</li>
+      <li><strong>Modular world-models framework</strong> (PyTorch) supporting interchangeable vision, dynamics, and controller modules. In-progress reproductions of <strong>DreamerV3</strong>, <strong>IRIS-Δ</strong>, <strong>DIAMOND</strong>, and a PROWL-style continual-learning prioritised replay buffer; Ha &amp; Schmidhuber's 2018 <em>World Models</em> was the initial target.</li>
+      <li><strong>Self-taught ML curriculum</strong> from statistics and linear algebra through the world-models research frontier (Karpathy, diffusion policies, PPO, DIAMOND, V-JEPA 2, UWM, Cosmos). Built a learning scaffold from lecture slides and transcripts that let me work through <strong>Stanford CS 234</strong> (RL), <strong>CS 236</strong> (Deep Generative Models), and <strong>MIT 6.S184</strong> from first principles alongside the original lecturers.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Glitch House</div>
+      <div class="entry-date">Jan 2026 – Apr 2026</div>
+    </div>
+    <div class="entry-org">Co-founder, Tech &amp; Curriculum — Bengaluru</div>
+    <ul class="entry-body">
+      <li>Co-founded an offline robotics-and-AI learning center for middle-schoolers; project-based curriculum with concept gates and degenerate-project pairs.</li>
+      <li>Built a Gemini-based content pipeline ingesting YouTube and Instagram videos into structured, age-appropriate project manuals.</li>
+      <li>Built sample student projects for the curriculum, including an <strong>AI Poetry Camera</strong> — a Raspberry Pi vision-LLM-to-thermal-printer pipeline used as a demo for parent workshops.</li>
+      <li>Validated parent demand through workshops; opened angel conversations (BITS Spark Angel Network, Campus Fund, Phanindra Sama, Amit Gupta, Kaustav Mishra, Alagu Periyannan).</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Ola Electric</div>
+      <div class="entry-date">Jan 2024 – Jan 2025</div>
+    </div>
+    <div class="entry-org">Program Manager, Founder's Office &amp; BA Office — Bengaluru</div>
+    <ul class="entry-body">
+      <li>Selected for a <strong>6-person founder's-office cohort</strong> reporting directly to CEO Bhavish Aggarwal; technical-decision unblocker across multiple cross-functional programs.</li>
+      <li><strong>Robotics dark-store pilot.</strong> Owned cross-functional execution of an autonomous pick-and-place dark-store prototype — container-deployable (tent + trailer + cold storage) using <strong>UR5e</strong> manipulation with PLC-driven automation. Coordinated mechanical, electrical, automation, software, AI/vision, procurement, and cold-storage streams across vendors (Festo, Universal Robots, Impel, APT, Pulse); owned BOM cost finalization, statement-of-requirements drafting (UPS, battery, SMPS), and sensor-placement specs. Drove concept → working prototype in <strong>2 months</strong>, including a <strong>15-day hands-on factory build sprint</strong> for the live demo.</li>
+      <li><strong>Gen 3 scooter portfolio — BA Office.</strong> Coordinated parallel launch programs across Gen 3 (S1 Pro, S1 X), Roadster, Sportster, and M3. Standardized the DFX framework (Design for Quality / Cost / Reliability / Assembly) across programs. Owned cross-program review formats and daily founder-facing quality-tracker reports.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">CoinSwitch Ventures</div>
+      <div class="entry-date">Jun 2023 – Nov 2023</div>
+    </div>
+    <div class="entry-org">Startup Analyst — Bengaluru</div>
+    <ul class="entry-body">
+      <li>Co-managed a $25M crypto / Web3 startup investment portfolio; led sourcing and due diligence for 3 successful deployments; presented investment theses directly to the CEO.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Myriad (Dyeus)</div>
+      <div class="entry-date">Feb 2023 – Apr 2023</div>
+    </div>
+    <div class="entry-org">Blockchain Developer — Remote</div>
+    <ul class="entry-body">
+      <li>Built and deployed smart contracts on Polygon and EVM-compatible chains for DeFi protocols (lending, automated market makers, liquidity pools).</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Leadership</h2>
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Oasis — BITS Pilani's flagship cultural festival</div>
+      <div class="entry-date">Dec 2022 – Nov 2023</div>
+    </div>
+    <div class="entry-org">Festival Head (StuCCAn)</div>
+    <ul class="entry-body">
+      <li>Led a 60-member core team and coordinated 50+ departments to execute India's largest student-run cultural festival; managed a $330K budget; established media and corporate sponsorships.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Academic Project</h2>
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Blockchain-Enabled P2P Energy Trading System</div>
+      <div class="entry-date">2023 – 2024</div>
+    </div>
+    <div class="entry-org">B.E. Thesis · Prof. Tribeni Roy</div>
+    <ul class="entry-body">
+      <li>Designed an on-chain distributed order book for renewable-energy trading; binary-tree data structures for efficient on-chain computation. Selected as the basis for subsequent PhD research.</li>
+    </ul>
+  </div>
+</section>
+
+</body>
+</html>
