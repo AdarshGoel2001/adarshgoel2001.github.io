@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Adarsh Goel — Resume</title>
-<meta name="description" content="Technical Founder’s Office operator · World models + Agent Harnesses · ex-Ola Electric · BITS Pilani">
+<meta name="description" content="Technical Founder’s Office operator · Deeptech bias · Agent harnesses · ex-Ola Group · BITS Pilani">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -286,9 +286,13 @@ h2 {
 
 /* ─── Print ──────────────────────────────────────── */
 @media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
   body {
     max-width: none;
-    padding: 22pt 32pt;
+    padding: 18pt 28pt;
     font-size: 9.5pt;
     background: white;
     color: black;
@@ -303,8 +307,20 @@ h2 {
     padding-bottom: 4pt;
   }
   header { margin-bottom: 16pt; }
-  section { margin-bottom: 14pt; page-break-inside: avoid; }
-  .entry { margin-bottom: 12pt; page-break-inside: avoid; }
+  section {
+    margin-bottom: 12pt;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+  .entry {
+    margin-bottom: 10pt;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+  .entry-head {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
   .entry-title { font-size: 10.5pt; }
   .entry-org { font-size: 9.5pt; margin-bottom: 4pt; }
   .entry-date { font-size: 8.5pt; }
@@ -313,7 +329,18 @@ h2 {
     margin-bottom: 3pt;
     line-height: 1.4;
   }
-  .entry-body li::before { top: 7pt; }
+  .entry-body li::before {
+    content: "\2022";
+    top: 0;
+    left: -12pt;
+    width: auto;
+    height: auto;
+    background: transparent;
+    border-radius: 0;
+    color: black;
+    font-size: 9.5pt;
+    line-height: 1.4;
+  }
   .subpoints {
     margin-top: 2pt;
     padding-left: 10pt;
@@ -323,7 +350,18 @@ h2 {
     margin-bottom: 2pt;
     line-height: 1.35;
   }
-  .subpoints li::before { top: 6pt; left: -7pt; }
+  .subpoints li::before {
+    content: "\2022";
+    top: 0;
+    left: -8pt;
+    width: auto;
+    height: auto;
+    background: transparent;
+    border-radius: 0;
+    color: black;
+    font-size: 9pt;
+    line-height: 1.35;
+  }
   .flat-list li { font-size: 9.5pt; margin-bottom: 3pt; }
   a { color: black !important; border-bottom: none !important; text-decoration: none !important; }
   .entry a { border-bottom: none !important; }
@@ -355,7 +393,7 @@ h2 {
 
 <header>
   <h1>Adarsh Goel</h1>
-  <p class="tagline">Technical Founder’s Office operator · World models + Agent Harnesses · ex-Ola Electric · BITS Pilani '24</p>
+  <p class="tagline">Technical Founder’s Office operator · Deeptech bias · Agent harnesses · ex-Ola Group · BITS Pilani '24</p>
   <div class="contact">
     Bengaluru, India
     <span class="sep">·</span>
@@ -367,7 +405,7 @@ h2 {
     <span class="sep">·</span>
     <a href="https://github.com/AdarshGoel2001" rel="noopener" target="_blank">GitHub</a>
   </div>
-  <p class="summary"><strong>Technical Founder’s Office operator</strong> from <a href="https://in.linkedin.com/in/bhavishaggarwal" target="_blank" rel="noopener">Bhavish Aggarwal</a>’s office at Ola Group, with experience across Krutrim AI, autonomous robotics, EV manufacturing, R&amp;D, and founder-facing operating cadence. My core operating muscle is <strong>distilling messy multi-team technical programs into the decisions leadership needs to make, then turning those decisions back into clear execution loops</strong> for engineering, product, business teams etc. Post operating breadth at Ola, built <strong>technical AI depth</strong> across deep learning and RL fundamentals, world models, and Agent Harnesses; founded Glitch House, an AI/robotics learning venture translating that depth into curriculum, tools, and demos for students.</p>
+  <p class="summary"><strong>Technical Founder’s Office operator</strong> who spent one year working directly with <a href="https://in.linkedin.com/in/bhavishaggarwal" target="_blank" rel="noopener">Bhavish Aggarwal</a> at Ola Group, with experience across Krutrim AI, autonomous robotics, EV manufacturing, R&amp;D, and founder-facing operating cadence. My core operating muscle is <strong>distilling messy multi-team technical programs into the decisions leadership needs to make, then turning those decisions back into clear execution loops</strong> for engineering, product, business teams etc. Post operating breadth at Ola, built <strong>technical AI depth</strong> across deep learning and RL fundamentals, world models, and Agent Harnesses; founded Glitch House, an AI/robotics learning venture translating that depth into curriculum, tools, and demos for students.</p>
 </header>
 
 <section>
@@ -377,10 +415,7 @@ h2 {
       <div class="entry-title">Birla Institute of Technology and Science, Pilani</div>
       <div class="entry-date">2020 – 2024</div>
     </div>
-    <div class="entry-org">B.E. Manufacturing Engineering · GPA 7.8 / 10 · Completed in 7 of 8 semesters</div>
-    <ul class="entry-body">
-      <li>Self-taught the full JEE syllabus in <strong>9 months</strong> from free YouTube lectures to secure admission (typical prep time: 2–3 years).</li>
-    </ul>
+    <div class="entry-org">B.E. Manufacturing Engineering · Completed in 7 of 8 semesters</div>
   </div>
 </section>
 
@@ -389,18 +424,19 @@ h2 {
 
   <div class="entry">
     <div class="entry-head">
-      <div class="entry-title">Ola Electric</div>
+      <div class="entry-title">Ola Group</div>
       <div class="entry-date">Jan 2024 – Jan 2025</div>
     </div>
     <div class="entry-org">Program Manager, Founder's Office &amp; BA Office — Bengaluru</div>
     <ul class="entry-body">
-      <li>Joined as Ola Electric's <strong>first young Founder's Office hire</strong> after graduating early from BITS Pilani; got first-hand exposure to how high-velocity, founder-led technical companies operate across Krutrim AI, robotics, EV manufacturing, and R&amp;D.</li>
-      <li>Program-managed BA-office operating cadences across Ola Electric, Ola Consumer, and Krutrim: designed <strong>custom metric digests, daily/weekly review trackers, and leadership review packs</strong> for founder-facing decisions. Owned key operating programs including P0 senior-leadership hiring, Krutrim model-release readiness, and Ola Consumer food launch.</li>
-      <li>Promoted to program lead for Ola's <strong><a href="https://www.youtube.com/watch?v=At992Db1M5M" target="_blank" rel="noopener">autonomous dark-store robotics pilot</a></strong>, a 0→1 project to automate dark-store operations using vision AI, robotic arms, grippers, and conveyor-based warehouse automation systems.</li>
-      <li>Served as the <strong>central program owner</strong> across electrical, mechanical, software, automation, procurement, manufacturing, and business teams; coordinated BCG on the business-model and operating-plan side.</li>
-      <li>Drove the robotics pilot from <strong>founder-approved concept to working prototype in ~2 months</strong> for <a href="https://the-captable.com/2024/08/olas-quick-commerce-enablement/" target="_blank" rel="noopener">Ola Sankalp</a> national presentation by coordinating senior leaders including <a href="https://in.linkedin.com/in/shaun-calvert-7b1552122" target="_blank" rel="noopener">Shaun Calvert</a>, <a href="https://in.linkedin.com/in/samraj-jabez-dhinagar-73a5626" target="_blank" rel="noopener">Samraj Dhinagar</a>, and <a href="https://www.linkedin.com/in/perry-deu-97209a62/" target="_blank" rel="noopener">Perry Deu</a>.</li>
-      <li>Prepared teams for BA/founder reviews by structuring agendas, surfacing open decisions, and converting <strong>technical blockers into clear leadership choices</strong>.</li>
-      <li>Moved into program leadership for Ola Electric's <strong>core scooter and future-product portfolio</strong>, supporting Ola S1 Gen 3, Roadster, and upcoming 3-wheeler / gig-worker vehicle programs; worked across engineering, R&amp;D, DFX, testing, warranty, and Ola Cell integration readiness; prepared leaders including <a href="https://in.linkedin.com/in/kripa-designexpert" target="_blank" rel="noopener">Kripa Ananthan</a>, <a href="https://www.linkedin.com/in/anirbandas5/" target="_blank" rel="noopener">Anirban Das</a>, and <a href="https://in.linkedin.com/in/rajesh-mekkat-09a28316" target="_blank" rel="noopener">Rajesh Mekkat</a> for BA/founder reviews.</li>
+      <li>Joined as Ola Group's <strong>youngest Founder's Office hire</strong> after graduating early from BITS Pilani; worked directly with Bhavish Aggarwal across <strong>Krutrim AI, Ola Electric, Ola Cell, and Ola Consumer</strong>.</li>
+      <li>Redesigned BA-facing <strong>group-level daily metrics</strong>, reducing metric packs to the highest-signal <strong>~30%</strong> and driving report automation from <strong>0% to ~90%</strong> for founder-review readiness.</li>
+      <li>Program-managed Ola's ONDC commerce deployment with BCG, including <a href="https://www.linkedin.com/in/varunboppana/" target="_blank" rel="noopener">Varun Boppana</a>, and internal product / ops teams, helping Ola Foods scale from <strong>0 to ~6K orders/day</strong> and launch across <strong>119 cities</strong>; coordinated <strong>13+ ONDC grocery seller partners</strong> and tech-integration work to route food/grocery deliveries through Ola Consumer's ride-hailing and logistics supply.</li>
+      <li>Promoted to <strong>Program Lead</strong> for Ola's <strong><a href="https://www.youtube.com/watch?v=At992Db1M5M" target="_blank" rel="noopener">autonomous dark-store robotics pilot</a></strong>, a <strong>₹60 Cr mandated New Commerce automation program</strong> using vision AI, robotic arms, grippers, conveyors, lifts, sensors, and warehouse-control systems, with <strong>~₹10 Cr deployed across two built dark stores</strong>.</li>
+      <li>Drove the robotics pilot from <strong>founder-approved concept to working prototype in ~2 months</strong> for <a href="https://the-captable.com/2024/08/olas-quick-commerce-enablement/" target="_blank" rel="noopener">Ola Sankalp</a> by managing a <strong>70+ member cross-functional team</strong> across electrical, mechanical, software, automation, AI vision, robotics, procurement, manufacturing, finance, BCG, and business teams, coordinating senior leaders including <a href="https://in.linkedin.com/in/shaun-calvert-7b1552122" target="_blank" rel="noopener">Shaun Calvert</a>, <a href="https://www.linkedin.com/in/perry-deu-97209a62/" target="_blank" rel="noopener">Perry Deu</a>, and <a href="https://www.linkedin.com/in/ajit-gokhale-342071172/" target="_blank" rel="noopener">Ajit Gokhale</a>.</li>
+      <li>Used cross-functional context to spot system-level efficiency opportunities; improved dark-store simulation throughput from <strong>~720 to ~1,024 orders/day</strong> by correcting conveyor/sensor assumptions and modeling bidirectional conveyor movement.</li>
+      <li>Moved into BA Office program leadership for Ola Electric's <strong>Gen3, Roadster, and future-product portfolio</strong>, preparing BA/founder reviews across engineering, R&amp;D, DFX, testing, drawing releases, homologation, warranty, and supplier decisions; unblocked an ABS SOP threat by switching to a new vendor, reducing time to SOP by <strong>4 months</strong>.</li>
+      <li>Supported Ola Cell and battery-program workstreams with <a href="https://www.linkedin.com/in/vishalmchaturvedi/" target="_blank" rel="noopener">Vishal Chaturvedi</a> across <strong>Pan-Asia equipment-supplier planning for Gigafactory</strong>, Battery Innovation Centre IPO-investor readiness, battery-warranty economics for new cells, and battery-fault RCA.</li>
     </ul>
   </div>
 
@@ -411,10 +447,8 @@ h2 {
     </div>
     <div class="entry-org"><strong>Co-founder, Tech &amp; Curriculum</strong> — Bengaluru</div>
     <ul class="entry-body">
-      <li>Started Glitch from the thesis that LLMs could compress technical learning by helping motivated students build real projects early while also developing first-principles understanding of how systems work.</li>
-      <li>Co-founded an <strong>offline AI/robotics learning venture</strong> for middle-schoolers; owned product, curriculum, AI tooling, demo projects, workshop design, and technical storytelling around an AI-native project-based learning model.</li>
-      <li>Designed the learning and content system: built a <strong>skill-tree curriculum</strong> for robotics, coding, AI tools, and creative hardware projects, plus a <strong>Gemini pipeline</strong> converting YouTube/Instagram project references into structured, age-appropriate manuals and repeatable workshop artifacts.</li>
-      <li>Validated demand, business model, and investor interest: ran <strong>parent/student demos</strong> with projects like the AI Poetry Camera; found parents were willing to pay meaningfully if retention could be sustained, shaped the model toward a subscription-based project studio, and entered angel/fund conversations with Campus Fund, <a href="https://www.linkedin.com/in/alperi" target="_blank" rel="noopener">Alagu Periyannan</a>, <a href="https://in.linkedin.com/in/phanisama" target="_blank" rel="noopener">Phanindra Sama</a>, and others.</li>
+      <li>Co-founded an <strong>offline AI/robotics learning venture</strong> for middle-schoolers; owned product, curriculum, AI tooling, demo projects, workshop design, and technical storytelling around an AI-native project-based learning model, including a <strong>skill-tree curriculum</strong> and <strong>Gemini pipeline</strong> converting YouTube/Instagram project references into structured workshop manuals.</li>
+      <li>Validated demand through word-of-mouth workshops and demos, interacting with <strong>120+ students</strong> and <strong>40+ parents</strong> without paid marketing; parents organically referred other families after seeing projects like the AI Poetry Camera, shaping the model toward a subscription-based project studio and angel/fund conversations with Campus Fund, <a href="https://www.linkedin.com/in/alperi" target="_blank" rel="noopener">Alagu Periyannan</a>, <a href="https://in.linkedin.com/in/phanisama" target="_blank" rel="noopener">Phanindra Sama</a>, and others.</li>
     </ul>
   </div>
 </section>
@@ -435,7 +469,6 @@ h2 {
           <li>Contributed fixes upstream to Zapier’s benchmark codebase; <strong>one PR merged</strong>, with other PRs currently being discussed with the authors.</li>
         </ul>
       </li>
-      <li><strong>First-principles ML self-study.</strong> Self-taught statistics, linear algebra, deep learning, RL, and world-model literature through <a href="https://web.stanford.edu/class/cs234/CS234Spr2024/index.html" target="_blank" rel="noopener">Stanford CS 234</a>, <a href="https://deepgenerativemodels.github.io/syllabus.html" target="_blank" rel="noopener">CS 236</a>, <a href="https://diffusion.csail.mit.edu/" target="_blank" rel="noopener">MIT 6.S184</a>, and frontier papers; used LLMs as interactive tutors to interrogate lectures and derive intuitions. Extended the same research mindset into LLM systems: chose to measure agent reliability and failure modes on real workflows rather than building toy demo agents.</li>
       <li><strong><a href="https://github.com/AdarshGoel2001/orbitWars" target="_blank" rel="noopener">Orbit Wars</a> (<a href="https://www.kaggle.com/competitions/orbit-wars/overview" target="_blank" rel="noopener">Kaggle ML competition</a>).</strong> Built a self-play RL bot for a strategy-based inter-agent game under severe Kaggle CPU limits. Offloaded deterministic game mechanics into a simulator tool inside the neural-network harness, so the model only had to learn strategic attack decisions; redesigned inference around a lightweight axial-attention transformer, cutting runtime from <strong>3.16 s to ~20 ms per turn</strong>. Rule-based baseline ranked top ~450 globally; PPO self-play later reached <strong>63% win-rate vs that baseline</strong>.</li>
       <li><strong><a href="https://github.com/AdarshGoel2001/rl-lab" target="_blank" rel="noopener">Modular world-models research framework</a></strong> (PyTorch). Inspired by <a href="https://www.linkedin.com/in/andrej-karpathy-9a650716" target="_blank" rel="noopener">Andrej Karpathy</a>’s <a href="https://github.com/karpathy/autoresearch" target="_blank" rel="noopener">“autoresearch”</a> framing, built a Hydra-based harness that constrains model-assisted research into explicit component contracts and targeted experiment configs: swappable encoders, representation learners, dynamics models, controllers, buffers, and workflows. Reproducing the world-model lineage from <a href="https://arxiv.org/abs/1803.10122" target="_blank" rel="noopener">Ha &amp; Schmidhuber’s 2018 <em>World Models</em></a> through Google DeepMind’s <a href="https://arxiv.org/abs/1811.04551" target="_blank" rel="noopener">PlaNet</a> and <a href="https://arxiv.org/abs/1912.01603" target="_blank" rel="noopener">Dreamer</a> series, with ablations over which model/scaffold combinations best support planning and control.</li>
     </ul>
@@ -451,20 +484,10 @@ h2 {
     </div>
     <div class="entry-org">Startup Analyst — Bengaluru</div>
     <ul class="entry-body">
-      <li>Co-managed a <strong>$25M crypto / Web3 startup investment portfolio</strong>; sourced startups, led diligence on emerging technical markets for <strong>3 successful deployments</strong>, and presented investment theses directly to the CEO with <a href="https://www.linkedin.com/in/parth-chaturvedi-a672165a/" target="_blank" rel="noopener">Parth Chaturvedi</a>.</li>
+      <li>Co-managed a <strong>$25M crypto / Web3 startup investment portfolio</strong>; sourced and screened <strong>~150 Web3 startups</strong>, did diligence on emerging technical markets, and presented <strong>~15 investment theses</strong> directly to the CEO with <a href="https://www.linkedin.com/in/parth-chaturvedi-a672165a/" target="_blank" rel="noopener">Parth Chaturvedi</a>, contributing to <strong>3 successful investments</strong> including STAN, bitsCrunch, and Block Scholes.</li>
     </ul>
   </div>
 
-  <div class="entry">
-    <div class="entry-head">
-      <div class="entry-title">Myriad (Dyeus)</div>
-      <div class="entry-date">Feb 2023 – Apr 2023</div>
-    </div>
-    <div class="entry-org">Blockchain Developer — Remote</div>
-    <ul class="entry-body">
-      <li>Built and deployed smart contracts on Polygon and EVM-compatible chains for DeFi protocols (lending, automated market makers, liquidity pools).</li>
-    </ul>
-  </div>
 </section>
 
 <section>
@@ -485,7 +508,7 @@ h2 {
     </div>
     <div class="entry-org">Festival Head (StuCCAn)</div>
     <ul class="entry-body">
-      <li>Led a <strong>60-member core team</strong> and coordinated 50+ departments to execute India's largest student-run cultural festival; managed a <strong>$330K budget</strong>; established media and corporate sponsorships.</li>
+      <li>As one of 8 StuCCA festival heads, co-managed a <strong>₹3.3 Cr student-run P&amp;L</strong> for Oasis 2023, balancing artist bookings, publicity, festival inventory, campus visual identity, and <strong>50+</strong> department budget allocations; led the <strong>60+ member Art, Design &amp; Publicity department</strong> and closed the festival net profitable.</li>
     </ul>
   </div>
 
@@ -497,20 +520,6 @@ h2 {
     <div class="entry-org">Web3 Track Lead</div>
     <ul class="entry-body">
       <li>Conceptualized and launched a dedicated Web3 track; secured <strong>$20K in sponsorship</strong>; established partnerships with 5+ industry leaders; attracted <strong>90+ startup registrations</strong> through organic marketing.</li>
-    </ul>
-  </div>
-</section>
-
-<section>
-  <h2>Academic Project</h2>
-  <div class="entry">
-    <div class="entry-head">
-      <div class="entry-title">Blockchain-Enabled P2P Energy Trading System</div>
-      <div class="entry-date">2023 – 2024</div>
-    </div>
-    <div class="entry-org">B.E. Thesis · Prof. <a href="https://in.linkedin.com/in/tribeni-roy-5866b725" target="_blank" rel="noopener">Tribeni Roy</a></div>
-    <ul class="entry-body">
-      <li>Designed an on-chain distributed order book for renewable-energy trading; binary-tree data structures for efficient on-chain computation. <strong>Selected as the basis for subsequent PhD research.</strong></li>
     </ul>
   </div>
 </section>
